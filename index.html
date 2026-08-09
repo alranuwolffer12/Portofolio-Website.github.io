@@ -51,8 +51,8 @@
                             <h1 class="hero_title">Halo, Saya<br><span class="accent">AlFATHIR R.N</span></h1>
                             <P class="hero_lede">Saya membangun pengalaman digital, aplikasi web sampai prototipe game kecil</P>
                             <div class="hero_actions">
-                                <a class="btn-primary" href="#portfolio">lihat Karya</a>
-                                <a class="btn-ghost" href="#contact">Hubungi saya</a>
+                                <a class="btn btn-primary" href="#portfolio">lihat Karya</a>
+                                <a class="btn btn-ghost" href="#contact">Hubungi saya</a>
                             </div>
                         </div>
                         <div class="hero_visual" aria-hidden="true">
@@ -128,7 +128,42 @@
                 </section>
 
                 <!-- ==== Portfolio ==== -->
-                <section id="portfolio" data-section></section>
+                <section class="section section--alt" id="portfolio" data-section>
+                    <p class="eyes">Karya saya</p>
+                    <h2 class="section_title" style="margin-bottom: 26px;">Portfolio</h2>
+
+                    <div class="filter-bar" data-filter-bar role="group" aria-label="Filter kategori project">
+                        <button class="filter-chip" data-filter="all" aria-pressed="true">Semua</button>
+                        <button class="filter-chip" data-filter="web" aria-pressed="false">Web Development</button>
+                        <button class="filter-chip" data-filter="game" aria-pressed="false">Game Dev</button>
+                    </div>
+
+                    <div class="project-grid" data-project-grid>
+
+                        <button class="project-card" data-category="game">
+                            <div class="project-card_thumb">
+                                <img src="assets/images/Project-Game.webp" alt="">
+                            </div>
+                            <div class="project-card_body">
+                                <div class="project-card_cat">Game Development</div>
+                                <h3 class="project-card_title">Project 1</h3>
+                                <p class="project-card_desc">Deskripsi project 1</p>
+                            </div>
+                        </button>
+
+                        <button class="project-card" data-category="web">
+                            <div class="project-card_thumb">
+                                <img src="assets/images/Project-Game.webp" alt="">
+                            </div>
+                            <div class="project-card_body">
+                                <div class="project-card_cat">Game Development</div>
+                                <h3 class="project-card_title">Project 1</h3>
+                                <p class="project-card_desc">Deskripsi project 1</p>
+                            </div>
+                        </button>
+
+                    </div>
+                </section>
 
                 <!-- ==== Contact ==== -->
                 <section id="contact" data-section></section>
