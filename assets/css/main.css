@@ -3,7 +3,8 @@
 /* --- leyout shell --- */
 .app-shell {
     display: flex;
-    min-height: 100vh;
+    min-height: 200vh;
+    width: 100%;
 }
 
 .sidebar {
@@ -66,7 +67,7 @@
     color: var(--accent);
 }
 
-.contect {
+.content {
     flex: 1;
     min-width: 0;
 }
@@ -139,7 +140,7 @@
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 72px 32px 88px;
+    padding: 72px 32px 40px;
     background: var(--bg-base);
 }
 
@@ -155,7 +156,7 @@
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 40px;
-    align-items: center;
+    align-items: start;
     max-width: 1200px;
 }
 
@@ -163,7 +164,7 @@
     font-family: var(--font-display);
     font-weight: 700;
     font-size: clamp(2.4rem, 5vw, 4rem);
-    line-height: 1.5;
+    line-height: 1.1;
     margin: 14px 0 18px;
 }
 
@@ -237,7 +238,7 @@
 
 /* --- setion umum --- */
 .section {
-    padding: 72px 32px;
+    padding:  32px;
 }
 
 .section--alt {
@@ -249,10 +250,10 @@
 }
 
 .section_title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-top: 8px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin-top: 8px;
 }
 
 .section_lede {
@@ -260,9 +261,9 @@
 }
 
 .section_link {
-  font-size: 0.82rem;
-  color: var(--accent);
-  white-space: nowrap;
+    font-size: 0.82rem;
+    color: var(--accent);
+    white-space: nowrap;
 }
 
 /* --- about --- */
@@ -298,23 +299,23 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     margin-top: 40px;
-    min-width: 1100px;
+    max-width: 1100px;
     padding: 32px;
     border-top: 1px solid var(--line-soft);
 }
 
 .stat_num {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--accent);
 }
 .stat_label {
-  font-size: 0.75rem;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-top: 4px;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
 }
 
 /* --- about skill card --- */
@@ -350,62 +351,69 @@
 
 /* --- Portofolio/project --- */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
 .project-card {
-    background: var(--bg-panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
+    position: relative;
+    max-width: 560px;
+    aspect-ratio: 16/9;
+    background-color: var(--accent);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    text-align: left;
-    width: 100%;
-    color: var(--text-primary);
-    transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
+    perspective: 1000px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card_thumb {
-    height: 180px;
-    background: var(--bg-panel-alt);
-    position: relative;
-    overflow: hidden;
-}
-
-.project-card_thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 .project-card_body {
-    padding: 18px, 20px, 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--accent);
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.project-card_cat {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--accent);
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
+.project-card:hover .project-card_body {
+    transform: rotateX(0deg);
 }
 
 .project-card_title {
     font-family: var(--font-display);
+    color: var(--bg-base);
     font-weight: 600;
-    font-size: 1.05rem;
-    margin: 8px, 0 6px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
 }
 
-.project-card__desc {
-  color: var(--text-secondary);
-  font-size: 0.86rem;
+.project-card_desc {
+    margin: 10px 0 10px;
+    font-size: 0.90rem;
+    color: var(--line-soft);
+    line-height: 1.4;
+}
+
+.btn-project {
+    background-color: var(--line);
+    color: var(--accent); 
 }
 
 /* --- Project-filter --- */
