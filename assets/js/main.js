@@ -57,3 +57,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setActive(sections[0].id);
 });
+
+/*- filter project -*/
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector("[data-project-grid]");
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll(".project-card"));
+  const filterBar = document.querySelector("[data-filter-bar]");
+  let activeCategory = "all";
+
+  applyVisibility();
+
+  if (filterBar) {
+    filterBar.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-filter]");
+      if (!chip) return;
+
+      filterBar.querySelectorAll("[data-filter]").forEach((c) =>
+        c.setAttribute("aria-pressed", "false")
+      );
+      chip.setAttribute("aria-pressed", "true");
+
+      activeCategory = chip.getAttribute("data-filter");
+      applyVisibility();
+    });
+  }
+
+  function applyVisibility() {
+    cards.forEach((card) => {
+      const matchesCategory = activeCategory === "all" || card.dataset.category === activeCategory;
+      card.hidden = !matchesCategory;
+    });
+  }
+});

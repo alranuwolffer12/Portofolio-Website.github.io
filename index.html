@@ -6,8 +6,8 @@
     <title>Alfathir Web Developer & Game Developer</title>
     <meta name="description" content="Portoflio Alfathir Ramandhan Nugroho seorang game dev dan web Developer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
         <a href=""></a>
@@ -21,7 +21,6 @@
                     <a class="sidebar_item" href="#portfolio">03<span class="label">PORTFOLIO</span></a>
                     <a class="sidebar_item" href="#contact">04<span class="label">CONTACT</span></a>
                 </nav>
-                <!--only persona-->
                 <div class="sidebar_foot" aria-hidden="true">CAT</div>
         </aside>
         
@@ -51,8 +50,8 @@
                             <h1 class="hero_title">Halo, Saya<br><span class="accent">AlFATHIR R.N</span></h1>
                             <P class="hero_lede">Saya membangun pengalaman digital, aplikasi web sampai prototipe game kecil</P>
                             <div class="hero_actions">
-                                <a class="btn-primary" href="#portfolio">lihat Karya</a>
-                                <a class="btn-ghost" href="#contact">Hubungi saya</a>
+                                <a class="btn btn-primary" href="#portfolio">lihat Karya</a>
+                                <a class="btn btn-ghost" href="#contact">Hubungi saya</a>
                             </div>
                         </div>
                         <div class="hero_visual" aria-hidden="true">
@@ -128,7 +127,42 @@
                 </section>
 
                 <!-- ==== Portfolio ==== -->
-                <section id="portfolio" data-section></section>
+                <section class="section section--alt" id="portfolio" data-section>
+                    <p class="eyes">Karya saya</p>
+                    <h2 class="section_title" style="margin-bottom: 26px;">Portfolio</h2>
+
+                    <div class="filter-bar" data-filter-bar role="group" aria-label="Filter kategori project">
+                        <button class="filter-chip" data-filter="all" aria-pressed="true">Semua</button>
+                        <button class="filter-chip" data-filter="web" aria-pressed="false">Web Development</button>
+                        <button class="filter-chip" data-filter="game" aria-pressed="false">Game Dev</button>
+                    </div>
+
+                    <div class="project-grid" data-project-grid>
+
+                        <div class="project-card" data-category="game">
+                            <div class="project-card_thumb">
+                                <img src="assets/images/Project-Game.webp" alt="Monster Rush Preview">
+                            </div>
+                            <div class="project-card_body">
+                                <p class="project-card_title">Monster Rush</p>
+                                <p class="project-card_desc">sebuah game sederhana yang dikembankan untuk mengasah kemampuan dalam mendisain game</p>
+                                <button class="btn btn-project">lihat disini</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="web">
+                            <div class="project-card_thumb">
+                                <img src="assets/images/Project-Game.webp" alt="Monster Rush Preview">
+                            </div>
+                            <div class="project-card_body">
+                                <p class="project-card_title">Monster Rush</p>
+                                <p class="project-card_desc">sebuah game sederhana yang dikembankan untuk mengasah kemampuan dalam mendisain game</p>
+                                <button class="btn btn-project">lihat disini</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
 
                 <!-- ==== Contact ==== -->
                 <section id="contact" data-section></section>
