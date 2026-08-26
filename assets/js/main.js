@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*- filter project -*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector("[data-project-grid]");
   if (!grid) return;
