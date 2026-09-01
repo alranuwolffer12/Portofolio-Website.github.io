@@ -63,7 +63,8 @@
     color: var(--text-tertiary);
 }
 
-.sidebar_item:hover, .sidebar_item[aria-current="page"] {
+.sidebar_item:hover,
+.sidebar_item[aria-current="page"] {
     color: var(--accent);
 }
 
@@ -74,13 +75,13 @@
 
 .hero,
 .section {
-  scroll-margin-top: var(--header-h);
+    scroll-margin-top: var(--header-h);
 }
 
 /* --- Header --- */
 .site-header {
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: space-between;
     gap: 25px;
     padding: 20px 32px;
@@ -95,14 +96,14 @@
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
 .brand_tagline {
     font-family: var(--font-mono);
     font-size: 0.5rem;
     color: var(--text-tertiary);
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.12em;
 }
 
 .main-nav {
@@ -238,7 +239,7 @@
 
 /* --- setion umum --- */
 .section {
-    padding:  32px;
+    padding: 32px;
 }
 
 .section--alt {
@@ -246,7 +247,8 @@
 }
 
 .section_head {
-    max-width: 640px; margin-bottom: 40px;
+    max-width: 640px;
+    margin-bottom: 40px;
 }
 
 .section_title {
@@ -257,7 +259,8 @@
 }
 
 .section_lede {
-    color: var(--text-secondary); margin-top: 10px;
+    color: var(--text-secondary);
+    margin-top: 10px;
 }
 
 .section_link {
@@ -310,6 +313,7 @@
     font-size: 2rem;
     color: var(--accent);
 }
+
 .stat_label {
     font-size: 0.75rem;
     color: var(--text-tertiary);
@@ -329,7 +333,7 @@
 
 .card_skill {
     background: var(--bg-base);
-    padding: 26px 24px; 
+    padding: 26px 24px;
     transition: backgraound 0.2s var(--ease);
 }
 
@@ -451,4 +455,35 @@
     background: var(--accent);
     border-color: var(--accent);
     color: var(--bg-base);
+}
+
+/* --- Portofolio/project --- */
+.sosial-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sosial-contact a {
+    color: var(--accent);
+    font-size: 40px;
+}
+
+.btn-contact {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: var(--bg-panel);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.btn-contact:hover {
+    transition-duration: .3s;
+    background-color: var(--accent-soft);
+    transform: scale(1.1);
 }
