@@ -344,7 +344,7 @@
 .card_skill_title {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: healine;
     margin-bottom: 14px;
 }
 
@@ -355,31 +355,27 @@
 
 /* --- Portofolio/project --- */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card {
     position: relative;
-    max-width: 560px;
+    width: 500px;
     aspect-ratio: 16/9;
-    background-color: var(--accent);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    perspective: 1000px;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s ease-in-out;
 }
 
 .project-card_thumb {
     width: 100%;
-    height: 100%;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
+    height: 200px;
+    object-fit: cover;
 }
 
 .project-card_body {
@@ -389,35 +385,45 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+    padding-top: 10px;
     box-sizing: border-box;
-    background-color: var(--accent);
-    transform: rotateX(-90deg);
+    background-color: var(--accent-hover);
+    transform: translateY(81%);
     transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s ease-in-out;
 }
 
 .project-card:hover .project-card_body {
-    transform: rotateX(0deg);
+    transform: translateY(0%);
 }
 
 .project-card_title {
     font-family: var(--font-display);
     color: var(--bg-base);
     font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 14px;
+    font-size: 24px;
+}
+
+.project-card_subtitle {
+    font-family: Arial, var(--font-display);
+    color: var(--bg-panel);
 }
 
 .project-card_desc {
     margin: 10px 0 10px;
-    font-size: 0.90rem;
+    font-size: 14px;
     color: var(--line-soft);
     line-height: 1.4;
 }
 
 .btn-project {
-    background-color: var(--line);
-    color: var(--accent);
+    background-color: var(--bg-panel);
+    color: var(--accent); 
+}
+
+.btn-project:hover {
+    background-color: var(--accent-soft);
+    scale: 1.;
 }
 
 /* --- Project-filter --- */
