@@ -1,4 +1,9 @@
 /*-=- main.js dasar logika -=-*/
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileNav();
+  initNavigationObserver();
+  initProjectFilter();
+});
 
 function initMobileNav() {
   const toggle = document.querySelector("[data-nav-toggle]");
@@ -22,7 +27,7 @@ function initMobileNav() {
 
 /*- Menandai navigasi -*/
 
-document.addEventListener("DOMContentLoaded", () => {
+function initNavigationObserver() {
   const sections = document.querySelectorAll("[data-section]");
   const navLinks = document.querySelectorAll(".sidebar_item, .main-nav a");
   if (!sections.length || !navLinks.length) return;
@@ -56,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section));
 
   setActive(sections[0].id);
-});
+};
 
 /*- filter project -*/
 
-document.addEventListener("DOMContentLoaded", () => {
+function initProjectFilter() {
   const grid = document.querySelector("[data-project-grid]");
   if (!grid) return;
 
@@ -80,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       chip.setAttribute("aria-pressed", "true");
 
-      activeCategory = chip.getAttribute("data-filter");
+      activeCategory = chip.dataset.filter;
       applyVisibility();
     });
   }
@@ -91,4 +96,4 @@ document.addEventListener("DOMContentLoaded", () => {
       card.hidden = !matchesCategory;
     });
   }
-});
+};
