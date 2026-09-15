@@ -150,6 +150,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
+    margin: 0;
 }
 
 .hero_grid {
@@ -160,6 +161,10 @@
     gap: 40px;
     align-items: start;
     max-width: 1200px;
+}
+
+.hero_info {
+    margin: 80px 0;
 }
 
 .hero_title {
@@ -226,16 +231,10 @@
     border-color: var(--accent-hover);
 }
 
-.hero_visual {
-    position: relative;
-    height: 340px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-}
-
 .hero_img {
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 450px;
+    min-width: 125px;
+    margin-left: 100px;
 }
 
 /* --- setion umum --- */
@@ -276,7 +275,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: start;
-    max-width: 1100px;
 }
 
 .about_photo {
@@ -284,7 +282,7 @@
     overflow: hidden;
     background: var(--bg-panel);
     aspect-ratio: 5.5/3;
-    margin-top: 40px;
+    margin: 20px 0
 }
 
 .about_photo img {
@@ -295,16 +293,15 @@
 
 .about_copy p {
     color: var(--text-tertiary);
-    margin-bottom: 16px;
+    margin: 20px 0;
 }
 
 /* --- stat skill --- */
 .stat_row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 25px;
     margin-top: 40px;
-    max-width: 1100px;
     padding: 32px;
     border-top: 1px solid var(--line-soft);
 }
